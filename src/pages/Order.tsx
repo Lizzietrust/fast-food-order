@@ -40,7 +40,7 @@ const Order = () => {
   const dispatch = useDispatch()
   const loggedIn = useSelector(getIsLoggedIn);
   console.log('logged', loggedIn);
-  const [pay, setPay] = useState(false);
+  // const [pay, setPay] = useState(false);
 
   const cartProducts = useSelector((state: { item: InitialState }) => state.item.products);
 
@@ -61,7 +61,7 @@ const Order = () => {
     const { firstName, lastName, email, phoneNum, city, houseNum, street } = inputValues;
     const completeData = firstName !== '' && lastName !== '' && email !== '' && phoneNum !== '' && city !== '' && houseNum !== '' && street !== '';
     if (completeData) {
-      setPay(true);
+      // setPay(true);
       toast.success('Orders successfully placed!')
       dispatch(resetCart());
     } else {
